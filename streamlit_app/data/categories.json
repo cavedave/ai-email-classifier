@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "CarTheft",
+    "CarWindshield",
+    "CarBreakdown",
+    "CarRenewal",
+    "Other"
+  ],
+  "descriptions": {
+    "CarTheft": "A car is stolen",
+    "CarWindshield": "A car windshield is cracked or broken",
+    "CarBreakdown": "a car has broken down",
+    "CarRenewal": "car insurance needs renewal",
+    "Other": ""
+  }
+}

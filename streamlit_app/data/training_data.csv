@@ -1,0 +1,17 @@
+Subject,Message,Label
+"car crash","my car crashed",CarCrash
+"car theft","my car was stolen help",CarTheft
+"car was stolen","my car was stolen help!","CarTheft"
+"bird poo","how do I stop birds pooing on my car?","Other"
+"Cracked Windshield Need Assistance Urgently","I hope this message finds you well. I am writing to inform you about a recent incident that has occurred with my insured car. Unfortunately, while driving earlier today, I noticed a small crack in the windshield. The size of the crack is not significant enough for me to be able to drive safely, and therefore, I need immediate assistance from your end.
+I was wondering if you could please guide me on the next steps that I should take? Do I need to get the car towed to a nearby garage for inspection or can you send someone to assess the damage at my location? Additionally, what is the process for getting the windshield repaired or replaced under my current policy?
+I am hoping for a quick response as the crack seems to be expanding and poses a potential risk while driving. I appreciate your prompt assistance in this matter.
+Thank you.
+Sincerely,","CarWindshield"
+"Car Theft - Immediate Assistance Required","I hope this message finds you well. Unfortunately, I am writing to inform you that my insured car has been stolen from the parking lot of my apartment complex. This incident occurred on [Date] at approximately [Time].
+Upon realizing that my car was missing, I immediately filed a police report at the local station. The case number is [Case Number]. I have also informed my landlord about the situation and am following up with them for any additional security measures they can provide.
+I would appreciate it if you could guide me on the next steps that I need to take. Do I need to submit any documents or information to initiate the claims process? How long will it take for you to assess the situation and provide me with a replacement car?
+Thank you in advance for your prompt assistance in this matter.
+Sincerely,","CarTheft"
+my car was stolen,help my car was stolen last night. I have told the police.  what do I do to tell you?,CarTheft,2025-07-31T12:04:52.664001
+car stolen,My car was stolen. I have told the police. How do I make a claim?,CarTheft,2025-08-01T11:48:58.115565
