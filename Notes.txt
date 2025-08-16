@@ -1,0 +1,17 @@
+Edit Notes
+# EmailClassifier.ipynb
+
+The following sentence is unclear: 
+- 2. Go to https://colab.research.google.com/ and add this key as a secret. If you did click on the open this in colab you have colab open already.
+
+the following line can exist outside the method as it can be static
+
+model = genai.GenerativeModel('gemini-1.5-flash', system_instruction="Return exactly one label for the user's message.")
+
+Images 
+- Interesting way of sharing images, you are including code rather than hot linking them or putting them in the repo.
+- Consider putting `DevOps` in the middle of the circular arrows
+- reduce the size of the `load your key into secrets` image as it take a large portion of a page
+
+This sentence is unclear
+- But you don't consider getting your brain to learn the difference between a good/bad/urgent/valuable  invoice/request/email/sales lead training a model.
