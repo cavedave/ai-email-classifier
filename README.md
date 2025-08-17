@@ -45,8 +45,7 @@ uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm \
                torch \
                google-genai ipywidgets seaborn datasets               
 
-# 4) Make the ipykernel visible in Jupyter
-python -m ipykernel install --user --name ai-email-classifier
+
 
 ```
 
