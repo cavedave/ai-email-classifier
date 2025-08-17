@@ -34,6 +34,10 @@ git clone https://github.com/cavedave/ai-email-classifier.git
 # 2) Project folder
 cd ai-email-classifier
 uv venv --python 3.13 venv
+# 3) Activate virtual environment
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
 # 3) Create env + install deps (very fast)
 uv pip install -U pip
 uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm \
