@@ -18,15 +18,22 @@ This project shows you how to take an idea ("I want to classify emails automatic
 
 ### 1. Clone and Setup
 ```bash
+
+# 1) Install uv (one time). If you already have puthon you are happy with skip this step and make a folder
+# macOS/Linux:
+#curl -LsSf https://astral.sh/uv/install.sh | sh
+# Windows (PowerShell):
+#irm https://astral.sh/uv/install.ps1 | iex
+
 git clone https://github.com/cavedave/ai-email-classifier.git
 cd ai-email-classifier
-uv venv
+uv venv --python 3.13 venv
 uv pip install -U pip
 uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm \
                transformers accelerate huggingface_hub \
                torch \
-               google-genai ipywidgets
-
+               google-genai ipywidgets seaborn datasets
+uv venv --python 3.13 venv
 ```
 
 ### 2. Launch Jupyter Lab
