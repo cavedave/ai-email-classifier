@@ -20,9 +20,13 @@ This project shows you how to take an idea ("I want to classify emails automatic
 ```bash
 git clone https://github.com/cavedave/ai-email-classifier.git
 cd ai-email-classifier
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+uv venv
+uv pip install -U pip
+uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm \
+               transformers accelerate huggingface_hub \
+               torch \
+               google-genai ipywidgets
+
 ```
 
 ### 2. Launch Jupyter Lab
