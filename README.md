@@ -22,17 +22,10 @@ This project shows you how to take an idea ("I want to classify emails automatic
 In Mac osx
 ```bash
 
-# 1) Install uv (one time). If you already have puthon you are happy with skip this step and make a folder
+# 1) Install uv (one time). If you already have python you are happy with skip this step and make a folder
 # macOS/Linux:
 #curl -LsSf https://astral.sh/uv/install.sh | sh
-# Windows (PowerShell):
-#irm https://astral.sh/uv/install.ps1 | iex
 
-# 1) Install uv (one time). If you already have puthon you are happy with skip this step and make a folder
-# macOS/Linux:
-#curl -LsSf https://astral.sh/uv/install.sh | sh
-# Windows (PowerShell):
-#irm https://astral.sh/uv/install.ps1 | iex
 git clone https://github.com/cavedave/ai-email-classifier.git
 # 2) Project folder
 cd ai-email-classifier
@@ -52,30 +45,63 @@ uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm \
 
 ```
 
-in windows
+in windows is a bit of work
+
+First off find what GPU you have.
 ```bash
 
 # 0) (One time) Install uv
-# irm https://astral.sh/uv/install.ps1 | iex
+irm https://astral.sh/uv/install.ps1 | iex
+
+
+Find where uv is installed and write it down 
+# Find uv.exe
+Get-ChildItem -Recurse $env:USERPROFILE -Filter uv.exe -ErrorAction SilentlyContinue
+
+this will output something like 
+$uvBin = 'C:\Users\reall\.local\bin'
+#double check its thereß
+if (-not (Test-Path "$uvBin\uv.exe")) {
+  Write-Error "uv.exe not found in $uvBin"; exit 1
+}
+
+# Add to PATH for current session if missing
+if (-not ($env:Path -split ';' | Where-Object { $_ -ieq $uvBin })) {
+  $env:Path = "$uvBin;$env:Path"
+}
 
 # 1) Get the project
 git clone https://github.com/cavedave/ai-email-classifier.git
 cd ai-email-classifier
 
+##if git doesnt work 
+
+
+# Verify
+git --version
+
 # 2) Create & activate a Python 3.12 virtual env
 uv venv --python 3.12 venv
 .\venv\Scripts\Activate.ps1
 
+Find your driver as in cuda126 is assume dbelow 
+# Pick ONE that matches your driver (example uses CUDA 12.6):
+uv pip install --index-url https://download.pytorch.org/whl/cu126 torch torchvision torchaudio
 # 3) Install deps (CPU)
 uv pip install -U pip
-uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm `
-               transformers accelerate huggingface_hub `
-               torch `
-               google-genai ipywidgets seaborn datasets
+uv pip install jupyterlab ipykernel pandas scikit-learn matplotlib tqdm  transformers accelerate huggingface_hub torch google-genai ipywidgets seaborn datasets
 
-# 4) Register a kernel for Jupyter
-python -m ipykernel install --user --name ai-email-classifier
 
+
+```
+If you dont have git download the source this way
+```bash
+
+
+curl -L -o ai-email-classifier.zip \
+  https://github.com/cavedave/ai-email-classifier/archive/refs/heads/main.zip
+unzip ai-email-classifier.zip
+cd ai-email-classifier-main
 ```
 
 ### 2. Launch Jupyter Lab
