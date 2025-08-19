@@ -15,3 +15,13 @@ Images
 
 This sentence is unclear
 - But you don't consider getting your brain to learn the difference between a good/bad/urgent/valuable  invoice/request/email/sales lead training a model.
+
+
+# Added 2025.08.19
+Training Times 
+Linux
+- Dell i7 64GB no GPU training time = 38 mins
+- MacBook Pro M1 training time = 13 mins
+
+ReadMe 
+- Updated in detail, please review and verify it is correct. 
